@@ -1,10 +1,12 @@
 {
-  "name": "task_1",
+  "name": "task_5",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon task3-3.js",
+    "start": "npx pm2 start src/task_5/server.js --name ngmp-network-app",
+    "watch": "npx pm2 start src/task_5/server.js --name ngmp-network-app --watch",
+    "stop": "npx pm2 stop ngmp-network-app",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:e2e": "jest /*e2e.test.ts"
@@ -17,7 +19,8 @@
     "@types/supertest": "^6.0.2",
     "csvtojson": "^2.0.10",
     "jest": "^29.7.0",
-    "nodemon": "^3.0.3",
+    "nodemon": "^3.1.0",
+    "pm2": "^5.3.1",
     "supertest": "^6.3.4",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
@@ -26,6 +29,7 @@
   "dependencies": {
     "axios": "^1.6.7",
     "express": "^4.18.2",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "uuid": "^9.0.1"
   }
 }
